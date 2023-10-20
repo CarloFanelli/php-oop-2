@@ -23,6 +23,6 @@ class Kennel extends Product
     */
     public function getDetails()
     {
-        return $this->width . 'cm x ' . $this->height . 'cm x ' . $this->depth . ' cm';
+        return 'Misure: ' . '<br>' . $this->width . 'cm x ' . $this->height . 'cm x ' . $this->depth . ' cm';
     }
 }

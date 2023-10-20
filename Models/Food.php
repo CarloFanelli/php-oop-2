@@ -18,6 +18,6 @@ class Food extends Product
     */
     public function getDetails()
     {
-        return $this->weight . 'g';
+        return 'Quantità: ' . $this->weight . 'g';
     }
 }

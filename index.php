@@ -14,18 +14,25 @@ require __DIR__  . '/db.php';
 <?php include './partials/header.php'; ?>
 <main>
     <div class="container">
-        <div class="row">
+        <div class="row my-4">
             <?php foreach ($prodotti as $prodotto) : ?>
-                <div class="col">
-                    <div class="card">
-                        <h2><?= $prodotto->product_name; ?></h2>
+                <div class="col-6 col-md-4 my-3">
+                    <div class="card h-100">
+                        <div class="card-header d-flex flex-column justify-content-between bg-success text-white h-25">
+                            <h4 class="text-uppercase"><?= $prodotto->product_name; ?></h4>
+                            <span><?= get_class($prodotto) ?></span>
+                        </div>
+                        <div class="card-body text-center h-50">
+                            <img class="h-75 img-fluid" src="<?= $prodotto->product_img ?>" alt="xx">
+                            <p class="mt-3"><?= $prodotto->getDetails(); ?></p>
+                        </div>
+                        <div class="card-footer h-25 d-flex justify-content-between align-items-center">
 
+                            <h2 class="text-success"><?= $prodotto->product_price; ?> €</h2>
+                            <span><?= $prodotto->product_cat->getIconCat(); ?></span>
+                        </div>
                     </div>
-                    <h2><?= $prodotto->product_price; ?> €</h2>
-                    <img class="img-fluid" src="<?= $prodotto->product_img ?>" alt="xx">
-                    <h2><?= $prodotto->getDetails(); ?></h2>
-                    <h2><?= $prodotto->product_cat->getIconCat(); ?></h2>
-                    <h2><?= get_class($prodotto) ?></h2>
+
                 </div>
             <?php endforeach; ?>
         </div>
