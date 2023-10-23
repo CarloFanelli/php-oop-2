@@ -12,7 +12,7 @@ try {
 
         $trasportino = new Kennel('trasportino', 100, new Category('gatti'), "https://unsplash.it/300/300?image=44", 50, 40, 20),
 
-        $palla_oro = new Toy('palla dorata', null, new Category('cani'), "https://unsplash.it/300/300?image=242", 'oro'),
+        $palla_oro = new Toy('palla dorata', 120, new Category('cani'), "https://unsplash.it/300/300?image=242", 'oro'),
 
         $crocchette = new Food('crocchette per gatti', 33, new Category('gatti'), "https://unsplash.it/300/300?image=142", 100),
 
