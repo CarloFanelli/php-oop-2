@@ -1,7 +1,10 @@
 <?php
 
+require_once __DIR__ . '/../Trait/Data.php';
 class Product
 {
+
+    use Data;
 
     public $product_name;
 
