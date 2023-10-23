@@ -21,4 +21,13 @@ class Product
         $this->product_img = $product_img;
         $this->product_cat = $product_cat;
     }
+
+    public function getPrice($price)
+    {
+        if (!is_null($price)) {
+            return $this->product_price;
+        } else {
+            throw new Exception('prezzo N.D.');
+        }
+    }
 }

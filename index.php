@@ -28,7 +28,7 @@ require __DIR__  . '/db.php';
                         </div>
                         <div class="card-footer h-25 d-flex justify-content-between align-items-center">
 
-                            <h2 class="text-success"><?= $prodotto->getPrice(); ?> €</h2>
+                            <h2 class="text-success"><?= $prodotto->getPrice($prodotto->product_price); ?> €</h2>
                             <span>
                                 <?= $prodotto->product_cat->getCat(); ?>
                                 <img style="width: 40px;" src=<?= $prodotto->product_cat->getIconCat(); ?> alt="">
