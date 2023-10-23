@@ -16,7 +16,7 @@ require __DIR__  . '/db.php';
     <div class="container">
         <div class="row my-4">
             <?php foreach ($prodotti as $prodotto) : ?>
-                <div class="col-6 col-md-4 my-3">
+                <div class="col-6 col-md-4 my-3 ">
                     <div class="card h-100">
                         <div class="card-header d-flex flex-column justify-content-between bg-success text-white h-25">
                             <h4 class="text-uppercase"><?= $prodotto->product_name; ?></h4>
@@ -29,7 +29,11 @@ require __DIR__  . '/db.php';
                         <div class="card-footer h-25 d-flex justify-content-between align-items-center">
 
                             <h2 class="text-success"><?= $prodotto->product_price; ?> €</h2>
-                            <span><?= $prodotto->product_cat->getIconCat(); ?></span>
+                            <span>
+                                <?= $prodotto->product_cat->getCat(); ?>
+                                <img style="width: 40px;" src=<?= $prodotto->product_cat->getIconCat(); ?> alt="">
+
+                            </span>
                         </div>
                     </div>
 

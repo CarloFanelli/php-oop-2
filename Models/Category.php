@@ -8,12 +8,21 @@ class Category
         $this->category = $category;
     }
 
+    public function getCat()
+    {
+        if ($this->category === 'Cani' or $this->category === 'cani') {
+            return 'Cani';
+        } elseif ($this->category === 'Gatti' or $this->category === 'gatti') {
+            return 'Gatti';
+        }
+    }
+
     public function getIconCat()
     {
         if ($this->category === 'Cani' or $this->category === 'cani') {
-            return 'Cani' . '<img style="width: 30px;" src="./icons/dog.png" alt="">';
+            return "./icons/dog.png";
         } elseif ($this->category === 'Gatti' or $this->category === 'gatti') {
-            return 'Gatti' . '<img style="width: 30px;" src="./icons/cat.png" alt="">';
+            return "./icons/cat.png";
         }
     }
 }
